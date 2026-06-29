@@ -1,0 +1,124 @@
+.vmc-bot-overlay,
+.vmc-placed-overlay,
+.vmc-obstacle-overlay {
+  --moveable-color: rgba(34, 197, 94, 0.7);
+  --moveable-handle-size: 12px;
+  --moveable-rotation-size: 16px;
+}
+
+.vmc-bot-overlay .moveable-control,
+.vmc-obstacle-overlay .moveable-control,
+.vmc-placed-overlay .moveable-control {
+  width: var(--moveable-handle-size) !important;
+  height: var(--moveable-handle-size) !important;
+  border-radius: 50% !important;
+  background: #22c55e !important;
+  background: var(--moveable-color) !important;
+  border: 2px solid #052e16 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.vmc-bot-overlay .moveable-control:hover,
+.vmc-obstacle-overlay .moveable-control:hover,
+.vmc-placed-overlay .moveable-control:hover {
+  transform: scale(1.2) !important;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.25) !important;
+}
+
+.vmc-bot-overlay .moveable-control.moveable-rotation,
+.vmc-obstacle-overlay .moveable-control.moveable-rotation,
+.vmc-placed-overlay .moveable-control.moveable-rotation {
+  width: var(--moveable-rotation-size) !important;
+  height: var(--moveable-rotation-size) !important;
+  background: rgb(59, 130, 246) !important;
+  border-color: rgb(255, 255, 255) !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+  cursor: alias !important;
+  opacity: 0.5 !important;
+}
+
+.vmc-bot-overlay.is-selected .moveable-control.moveable-rotation,
+.vmc-obstacle-overlay.is-selected .moveable-control.moveable-rotation,
+.vmc-placed-overlay.is-selected .moveable-control.moveable-rotation,
+.vmc-bot-overlay .moveable-control.moveable-rotation:hover,
+.vmc-obstacle-overlay .moveable-control.moveable-rotation:hover,
+.vmc-placed-overlay .moveable-control.moveable-rotation:hover {
+  opacity: 1 !important;
+}
+
+.vmc-bot-overlay .moveable-line.moveable-rotation-line,
+.vmc-obstacle-overlay .moveable-line.moveable-rotation-line,
+.vmc-placed-overlay .moveable-line.moveable-rotation-line {
+  background: rgba(59, 130, 246, 0.55) !important;
+  width: 1.5px !important;
+  opacity: 0.4 !important;
+}
+
+.vmc-bot-overlay .moveable-line.moveable-border,
+.vmc-obstacle-overlay .moveable-line.moveable-border,
+.vmc-placed-overlay .moveable-line.moveable-border {
+  background: rgba(59, 130, 246, 0.35) !important;
+  opacity: 0 !important;
+  transition: opacity 0.15s ease !important;
+}
+
+.vmc-bot-overlay.is-selected .moveable-line.moveable-border,
+.vmc-obstacle-overlay.is-selected .moveable-line.moveable-border,
+.vmc-placed-overlay.is-selected .moveable-line.moveable-border {
+  opacity: 1 !important;
+}
+
+.vmc-bot-overlay .moveable-direction,
+.vmc-obstacle-overlay .moveable-direction,
+.vmc-placed-overlay .moveable-direction {
+  display: none !important;
+}
+
+.vmc-bot-overlay .moveable-control-box,
+.vmc-obstacle-overlay .moveable-control-box,
+.vmc-placed-overlay .moveable-control-box {
+  pointer-events: none !important;
+}
+
+.vmc-bot-overlay .moveable-control,
+.vmc-obstacle-overlay .moveable-control,
+.vmc-placed-overlay .moveable-control,
+.vmc-bot-overlay .moveable-line,
+.vmc-obstacle-overlay .moveable-line,
+.vmc-placed-overlay .moveable-line {
+  pointer-events: auto !important;
+}
+
+.vmc-bot-overlay:not(.is-selected) .moveable-control:not(.moveable-rotation),
+.vmc-obstacle-overlay:not(.is-selected) .moveable-control:not(.moveable-rotation),
+.vmc-placed-overlay:not(.is-selected) .moveable-control:not(.moveable-rotation) {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.vmc-bot-grabber {
+  transition: filter 0.18s ease;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+}
+
+.vmc-bot-grabber:hover {
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.5));
+}
+
+.vmc-bot-overlay.is-selected .vmc-bot-grabber {
+  filter: drop-shadow(0 0 8px rgba(34, 197, 94, 0.6));
+}
+
+.vmc-bot-overlay .vmc-bot-ghost {
+  position: absolute;
+  inset: -6px;
+  border-radius: 14px;
+  border: 1.5px dashed rgba(59, 130, 246, 0);
+  pointer-events: none;
+  transition: border-color 0.15s ease;
+}
+
+.vmc-bot-overlay .vmc-bot-grabber:hover .vmc-bot-ghost {
+  border-color: rgba(59, 130, 246, 0.55);
+}

@@ -1,0 +1,49 @@
+{
+  "name": "robotics-simulator",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Sayedabutahir",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0",
+    "pnpm": ">=11.1.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@dimforge/rapier2d-compat": "^0.19.3",
+    "acorn": "^8.16.0",
+    "blockly": "^12.5.1",
+    "clsx": "2.1.1",
+    "consola": "^3.4.2",
+    "gsap": "^3.15.0",
+    "immer": "^11.1.8",
+    "konva": "^10.3.0",
+    "nanoid": "^5.1.16",
+    "py-ast": "^1.9.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-konva": "^19.2.4",
+    "react-moveable": "^0.56.0",
+    "react-split": "^2.0.14",
+    "tailwind-merge": "3.4.0",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.17",
+    "@types/node": "22.19.17",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vite": "8.0.4",
+    "vite-plugin-biome": "^1.2.0",
+    "vite-plugin-singlefile": "2.3.2",
+    "vite-plugin-static-copy": "^4.0.1"
+  },
+  "packageManager": "pnpm@11.1.1+sha512.d1fdf5f73c617b64fa1a56a81c3c8dfe0e966e33a6010aa256b517ae77be21d93e05affc0de1a83b0e4f29d569f68b446ae8f068cd7247c0bb3df0fb4d7bdf9a"
+}
